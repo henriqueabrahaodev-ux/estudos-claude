@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T00:00:00Z",
+  "title": "Design System: PataFeliz",
+  "extensions": {
+    "colorMeta": {
+      "amber-gold": {
+        "role": "primary",
+        "displayName": "Amber Gold",
+        "canonical": "#f59e0b",
+        "tonalRamp": ["#78350f", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fde68a", "#fffbeb"]
+      },
+      "amber-deep": {
+        "role": "primary",
+        "displayName": "Amber Deep",
+        "canonical": "#d97706",
+        "tonalRamp": ["#78350f", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fde68a", "#fffbeb"]
+      },
+      "amber-blush": {
+        "role": "primary",
+        "displayName": "Amber Blush",
+        "canonical": "#fffbeb",
+        "tonalRamp": ["#78350f", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fde68a", "#fffbeb"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#18181b",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#a1a1aa", "#f4f4f5"]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#3f3f46",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#a1a1aa", "#f4f4f5"]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#52525b",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#a1a1aa", "#f4f4f5"]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#71717a",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#a1a1aa", "#f4f4f5"]
+      },
+      "silver": {
+        "role": "neutral",
+        "displayName": "Silver",
+        "canonical": "#a1a1aa",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#a1a1aa", "#f4f4f5"]
+      },
+      "cloud": {
+        "role": "neutral",
+        "displayName": "Cloud",
+        "canonical": "#d4d4d8",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#d4d4d8", "#f4f4f5"]
+      },
+      "frost": {
+        "role": "neutral",
+        "displayName": "Frost",
+        "canonical": "#f4f4f5",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#d4d4d8", "#f4f4f5"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#71717a", "#a1a1aa", "#d4d4d8", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only. Paired with amber accent span." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles (h2). Center-aligned at section entry." },
+      "title": { "displayName": "Title", "purpose": "Card titles and service names (h3). Primary label inside content units." },
+      "body": { "displayName": "Body", "purpose": "Hero subheads and descriptive paragraphs." },
+      "label": { "displayName": "Label", "purpose": "Navigation links, button text, customer names." },
+      "caption": { "displayName": "Caption", "purpose": "Pet descriptor, helper text, testimonial metadata." }
+    },
+    "shadows": [
+      { "name": "header-layer", "value": "0 1px 2px 0 rgba(0,0,0,0.05)", "purpose": "Sticky header only — signals the fixed layer above scroll." },
+      { "name": "card-hover-lift", "value": "0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)", "purpose": "Card hover state. Never applied at rest." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "150ms ease", "purpose": "Default transition for color and background-color state changes (buttons, links)." },
+      { "name": "ease-lift", "value": "150ms ease", "purpose": "Shadow transition on card hover." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Full-pill amber button. Used for 'Agendar Agora' and all primary booking actions.",
+      "html": "<button class=\"ds-btn-primary\">Agendar Agora</button>",
+      "css": ".ds-btn-primary { background: #f59e0b; color: #ffffff; padding: 0.75rem 2rem; border-radius: 9999px; font-weight: 600; font-size: 0.875rem; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; border: none; cursor: pointer; transition: background 150ms ease; } .ds-btn-primary:hover { background: #d97706; } .ds-btn-primary:focus-visible { outline: 2px solid #f59e0b; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary CTA. Full-pill ghost button. Used alongside primary CTA for secondary actions like 'Ver Serviços'.",
+      "html": "<button class=\"ds-btn-ghost\">Ver Serviços</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #3f3f46; padding: 0.75rem 2rem; border-radius: 9999px; font-weight: 600; font-size: 0.875rem; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; border: 1px solid #d4d4d8; cursor: pointer; transition: background 150ms ease; } .ds-btn-ghost:hover { background: #f4f4f5; } .ds-btn-ghost:focus-visible { outline: 2px solid #f59e0b; outline-offset: 2px; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Icon + title + description unit. Used for services and differentials sections. Center-aligned, flat at rest, lifted on hover.",
+      "html": "<div class=\"ds-card-service\"><p class=\"ds-card-icon\">🛁</p><h3 class=\"ds-card-title\">Banho e Tosa</h3><p class=\"ds-card-desc\">Higiene completa com produtos naturais e profissionais especializados.</p></div>",
+      "css": ".ds-card-service { background: #ffffff; border: 1px solid #f4f4f5; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: none; transition: box-shadow 150ms ease; } .ds-card-service:hover { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); } .ds-card-icon { font-size: 2.25rem; margin-bottom: 1rem; } .ds-card-title { font-size: 1.125rem; font-weight: 600; color: #18181b; margin-bottom: 0.5rem; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; } .ds-card-desc { font-size: 0.875rem; color: #71717a; line-height: 1.6; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; }"
+    },
+    {
+      "name": "Testimonial Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Three-part card: star row → quote → name + pet badge. Left-aligned. Used in testimonials section.",
+      "html": "<div class=\"ds-card-testimonial\"><p class=\"ds-stars\">★★★★★</p><p class=\"ds-quote\">\"O Thor adora vir aqui! A equipe é super carinhosa.\"</p><div><p class=\"ds-reviewer-name\">Ana Lima</p><p class=\"ds-reviewer-pet\">Tutora do Thor 🐕</p></div></div>",
+      "css": ".ds-card-testimonial { background: #ffffff; border: 1px solid #f4f4f5; border-radius: 1rem; padding: 1.5rem; box-shadow: none; } .ds-stars { color: #f59e0b; font-size: 1.125rem; margin-bottom: 0.75rem; } .ds-quote { color: #52525b; font-size: 0.875rem; line-height: 1.6; margin-bottom: 1rem; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; } .ds-reviewer-name { font-size: 0.875rem; font-weight: 500; color: #18181b; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; } .ds-reviewer-pet { font-size: 0.75rem; color: #a1a1aa; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Sticky header with logo left, nav center (hidden on mobile), CTA button right.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-logo\" href=\"/\">🐾 PataFeliz</a><nav class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#servicos\">Serviços</a><a class=\"ds-nav-link\" href=\"#sobre\">Sobre</a><a class=\"ds-nav-link\" href=\"#contato\">Contato</a></nav><a class=\"ds-nav-cta\" href=\"#contato\">Agendar</a></header>",
+      "css": ".ds-nav { position: sticky; top: 0; z-index: 50; background: #ffffff; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; max-width: 72rem; margin: 0 auto; width: 100%; } .ds-nav-logo { font-size: 1.5rem; font-weight: 700; color: #d97706; text-decoration: none; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; } .ds-nav-links { display: flex; gap: 2rem; } .ds-nav-link { font-size: 0.875rem; font-weight: 500; color: #3f3f46; text-decoration: none; transition: color 150ms ease; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; } .ds-nav-link:hover { color: #f59e0b; } .ds-nav-cta { background: #f59e0b; color: #ffffff; padding: 0.5rem 1.25rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: background 150ms ease; font-family: Nunito Sans, ui-sans-serif, system-ui, sans-serif; } .ds-nav-cta:hover { background: #d97706; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Warm Neighborhood Clinic",
+    "overview": "PataFeliz feels like a place that has been on the same corner for a decade — familiar, well-lit, and run by people who remember your pet's name. The visual system channels this through amber warmth, clean white surfaces, and a confident typographic hierarchy that communicates professional care without clinical distance. It is warm without being cartoon-like; it earns trust before asking for a booking.\n\nThe palette is deliberately restrained: a single amber accent — deployed sparingly — against a graduated zinc neutral scale and generous white space. The forms are soft (pills for CTAs, rounded cards for content) but the typography is tight and purposeful. The result is a service business that respects its customers' time and their emotional relationship with their pets.\n\nSections alternate between pure white and amber-tinted backgrounds to create rhythm without relying on hard borders or dividers. Cards emerge from the page through state-conditional shadow, not permanent elevation — rest is flat, interaction is lifted.",
+    "keyCharacteristics": [
+      "Amber warmth as a single-accent identity color, used for CTAs and brand marks only",
+      "Graduated zinc neutrals (ink to frost) carrying all hierarchy and supporting roles",
+      "Pill-shaped CTAs signal accessibility and warmth; card forms are gently rounded",
+      "Flat at rest, lifted on interaction — elevation is earned through state",
+      "Section-level tinted alternation as a replacement for dividers"
+    ],
+    "rules": [
+      { "name": "The One Amber Rule", "body": "Amber Gold is used in exactly four contexts: the primary CTA button, the brand logo mark, star ratings, and interactive hover state for nav links. Using it anywhere else dilutes the brand signal. When in doubt, reach for Slate or Graphite instead.", "section": "colors" },
+      { "name": "The Section Stripe Rule", "body": "Sections alternate between Surface (#ffffff) and Amber Blush (#fffbeb). No other background tints are introduced. Borders between sections are never needed.", "section": "colors" },
+      { "name": "The No-Mix Rule", "body": "A single typeface across all roles. Weight and size do the hierarchy work. Do not introduce a second typeface for display or accent purposes.", "section": "typography" },
+      { "name": "The Earned Elevation Rule", "body": "Shadows appear only in response to state (hover, sticky position). No element in the system carries a resting shadow except the sticky header, which uses the lightest available shadow to signal its fixed layer. Permanent shadows are prohibited on cards, sections, and buttons.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Amber Gold (#f59e0b) exclusively on CTAs, the logo mark, star ratings, and nav hovers — its scarcity is what makes it feel like a brand color.",
+      "Do alternate section backgrounds between Surface (#ffffff) and Amber Blush (#fffbeb) to create rhythm without borders.",
+      "Do use full-pill buttons (border-radius: 9999px) for all interactive CTAs; rounded-2xl (1rem) for all content cards.",
+      "Do keep cards flat at rest and lift them (shadow-md) only on hover.",
+      "Do use center-aligned layout for icon-card triples (services, differentials) and left-aligned layout for testimonials.",
+      "Do anchor all sections to the max-w-6xl container with px-6 gutter."
+    ],
+    "donts": [
+      "Don't use amber on more than 10% of any screen's visible area — decorative amber fills break the brand signal.",
+      "Don't apply permanent shadow-md or larger to resting cards; elevation is earned through interaction only.",
+      "Don't introduce a second accent color (no teal, no coral, no green) — the amber + zinc system is intentionally focused.",
+      "Don't use square or sharp-cornered buttons; all interactive controls use the pill radius.",
+      "Don't add borders or dividers between sections; background alternation handles separation.",
+      "Don't use font weights above 700 or below 400 — the type scale has no ultra-bold or thin roles."
+    ]
+  }
+}

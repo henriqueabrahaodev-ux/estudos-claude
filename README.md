@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# projeto
 
-## Getting Started
+Aplicação Next.js 16 com App Router, React 19, TypeScript e TailwindCSS 4.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16.3.8** — App Router, Server Components
+- **React 19.2.8**
+- **TypeScript 5**
+- **TailwindCSS 4** (via `@tailwindcss/postcss`)
+- **ESLint 9** com `eslint-config-next`
+- **Geist** (fonte padrão via `next/font`)
+
+## Comandos
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # servidor local em http://localhost:3000
+npm run build    # build de produção
+npm run start    # inicia build de produção
+npm run lint     # executa ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estrutura
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+app/
+├── layout.tsx   # layout raiz (fonte, metadata)
+├── page.tsx     # página inicial
+└── globals.css  # estilos globais (Tailwind base)
+public/          # assets estáticos
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Configuração
 
-## Learn More
+- Import alias `@/*` mapeado para a raiz do projeto (`tsconfig.json`)
+- PostCSS configurado em `postcss.config.mjs`
+- TypeScript estrito em `tsconfig.json`
+- Variáveis de ambiente: copiar `.env.example` para `.env.local`
 
-To learn more about Next.js, take a look at the following resources:
+## Arquitetura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Server Components por padrão** — adicionar `'use client'` apenas para hooks, eventos ou browser APIs
+- **Server Actions em `actions/`** — nunca chamar banco de dados direto em Client Components
+- `components/ui/` — primitivos reutilizáveis (shadcn/ui)
+- `components/` — componentes de feature
+- `lib/` — helpers e clients externos
+- `types/` — tipos globais e schemas Zod
